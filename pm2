@@ -5,6 +5,7 @@
   - npm install pm2-windows-startup -g
   - pm2-startup install
   - pm2 save
+  - pm2 resurrect
  
 # create fiel.bat
    TIMEOUT 8
@@ -12,3 +13,9 @@
    pm2 restart 1
  
    cmd /K
+# run on file
+  TIMEOUT = 5
+  D:
+  CD /IMS/ims/abs_ko
+  NPM start
+  cmd /k
